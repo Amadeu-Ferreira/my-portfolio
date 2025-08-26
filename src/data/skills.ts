@@ -23,13 +23,5 @@ export const skillCategories = [
             "ExpressJS",
             "Socket.IO"
         ]
-    },
-    {
-        skill: "Soft Skills",
-        items: [
-            "Aprendizagem rápida",
-            "Autonomia",
-            "Comunicação clara"
-        ]
     }
 ] as const;

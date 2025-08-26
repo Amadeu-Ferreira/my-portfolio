@@ -24,3 +24,5 @@ export const companies = [
         ]
     }
 ] as const;
+
+export const defaultCompany = "eprom_tek";

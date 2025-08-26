@@ -6,11 +6,16 @@ import SectionTitle from "../SectionTitle";
 
 import { Button } from "../ui/button";
 
-import { companies } from "@/data/experience";
+import { companies, defaultCompany } from "@/data/experience";
 
-function Info({ companyValue }: { companyValue: string }) {
+function CompanyCard({
+    currentCompany
+}: {
+    currentCompany: string
+}) {
+    const company = companies.find((company) => company.value === currentCompany);
 
-    const company = companies.find((company) => company.value === companyValue)
+    if (!company) return;
 
     return (
         <div className="border p-4 border-dashed rounded-md space-y-4">
@@ -42,29 +47,42 @@ function Info({ companyValue }: { companyValue: string }) {
     );
 }
 
-export default function ExperienceSection() {
+function CompanySeletor({
+    currentCompany,
+    returnValue
+}: {
+    currentCompany: string;
+    returnValue: (newCurrentCompany: string) => void;
+}) {
+    return (
+        <div className="flex gap-4">
+            {companies.map((field, index) => (
+                <Button
+                    key={index}
+                    variant={field.value === currentCompany ? "default" : "outline"}
+                    onClick={() =>
+                        returnValue(field.value)
+                    }>
+                    {field.name}
+                </Button>
+            ))}
+        </div>
+    );
+}
 
-    const [company, setCompany] = useState("eprom_tek");
+export default function ExperienceSection() {
+    const [currentCompany, setCurrentCompany] = useState(defaultCompany);
 
     return (
         <div className="space-y-4">
             <SectionTitle title="Experiência" />
-            <div className="flex gap-4">
-                {companies.map((field, index) => (
-                    <Button
-                        key={index}
-                        variant={field.value === company ? "default" : "outline"}
-                        onClick={() =>
-                            setCompany(field.value)
-                        }>
-                        {field.name}
-                    </Button>
-                ))}
-            </div>
-            <div>
-                {company === "eprom_tek" && <Info companyValue="eprom_tek" />}
-                {company === "parametro_global" && <Info companyValue="parametro_global" />}
-            </div>
+            <CompanySeletor
+                currentCompany={currentCompany}
+                returnValue={(newCurrentCompany) => {
+                    setCurrentCompany(newCurrentCompany);
+                }}
+            />
+            <CompanyCard currentCompany={currentCompany} />
         </div>
     );
 }

@@ -12,13 +12,16 @@ export default function ProjectsSection() {
                     key={index}
                     className="border border-dashed rounded-md grid grid-cols-3">
                     <div className="p-4">
-                        <h1 className=" mb-2 font-semibold text-xl">
-                            <a
-                                href={`/${field.id}`}
-                                className="text-blue-400 underline hover:text-blue-800 transition">
-                                {field.name}
-                            </a>
-                        </h1>
+                        <div className="flex gap-4 items-center">
+                            <h1 className="mb-2 font-semibold text-xl">
+                                <a
+                                    href={`/${field.id}`}
+                                    className="text-blue-400 underline hover:text-blue-800 transition">
+                                    {field.name}
+                                </a>
+                            </h1>
+                            <p className="text-xs">{field.status}</p>
+                        </div>
                         <div className="flex flex-wrap gap-2">
                             {field.technologies.map((field, index) => (
                                 <Badge key={index} variant="outline">{field}</Badge>
@@ -32,6 +35,7 @@ export default function ProjectsSection() {
                             ))}
                         </ul>
                     </div>
+                    <p>{field.objective}</p>
                 </div>
             ))}
         </div>

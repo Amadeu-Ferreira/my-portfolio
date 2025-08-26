@@ -1,12 +1,13 @@
 import HomeSection from "@/components/sections/HomeSection";
-import ProjectsSection from "@/components/sections/ProjectsSection";
-import SkillsSection from "@/components/sections/SkillsSection";
+import EducationSection from "@/components/sections/EducationSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
+import SkillsSection from "@/components/sections/SkillsSection";
+import ProjectsSection from "@/components/sections/ProjectsSection";
 import ContactSection from "@/components/sections/ContactSection";
 
 export default function HomePage() {
     return (
-        <main className="relative space-y-20 mb-20">
+        <main className="relative space-y-30 mb-20">
             {/* Apresentação */}
             <section
                 id="home"
@@ -14,9 +15,11 @@ export default function HomePage() {
                 <HomeSection />
             </section>
 
-            {/* Skills */}
-            <section id="skills">
-                <SkillsSection />
+            <hr className="border-dashed" />
+
+            {/* Educação */}
+            <section id="education">
+                <EducationSection />
             </section>
 
             <hr className="border-dashed" />
@@ -24,6 +27,13 @@ export default function HomePage() {
             {/* Experience */}
             <section id="experience">
                 <ExperienceSection />
+            </section>
+
+            <hr className="border-dashed" />
+
+            {/* Skills */}
+            <section id="skills">
+                <SkillsSection />
             </section>
 
             <hr className="border-dashed" />

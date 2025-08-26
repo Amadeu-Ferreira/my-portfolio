@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function NotFound() {
     return (
@@ -7,12 +8,12 @@ export default function NotFound() {
             <p className="text-lg text-neutral-400 mb-6">
                 Página não encontrada. Verifica o URL ou volta ao início.
             </p>
-            <a
+            <Link
                 href="/"
                 className="text-blue-500 underline hover:text-blue-700 transition"
             >
                 <Button>Voltar</Button>
-            </a>
+            </Link>
         </div>
     );
 }

@@ -2,6 +2,8 @@ export const projects = [
     {
         id: "eat_ops",
         name: "EatOps",
+        status: "Em beta",
+        objective: "Aplicação com potencial comercial, desenvolvida para apoiar restaurantes na gestão eficiente de pedidos e menus.",
         url: "#",
         images: [],
         technologies: [
@@ -28,6 +30,8 @@ export const projects = [
     {
         id: "eat_wise",
         name: "EatWise",
+        status: "Em beta",
+        objective: "Aplicação com potencial de negócio, desenvolvida para apoiar ginásios e clínicas na gestão e acompanhamento nutricional dos seus clientes.",
         url: "#",
         images: [],
         technologies: ["Next.js",
@@ -35,9 +39,7 @@ export const projects = [
             "Tailwind CSS",
             "Shadcn",
             "Zod",
-            "Node.js",
-            "Express",
-            "PostgreSQL"
+            "Zustand"
         ],
         features: [
             "Criação de plano alimentar personalizado",
@@ -49,6 +51,8 @@ export const projects = [
     {
         id: "portfolio_pessoal",
         name: "Portfólio pessoal",
+        status: "Em produção",
+        objective: "Portfólio desenvolvido como vitrine profissional, reunindo projetos pessoais e competências técnicas.",
         url: null,
         images: [],
         technologies: [
