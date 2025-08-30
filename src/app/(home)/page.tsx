@@ -1,54 +1,42 @@
-import HomeSection from "@/components/sections/HomeSection";
-import EducationSection from "@/components/sections/EducationSection";
-import ExperienceSection from "@/components/sections/ExperienceSection";
-import SkillsSection from "@/components/sections/SkillsSection";
-import ProjectsSection from "@/components/sections/ProjectsSection";
-import ContactSection from "@/components/sections/ContactSection";
+import Header from "@/components/Header";
+import HomeSection from "@/components/HomeSection/Index";
+import EducationSection from "@/components/EducationSection/Index";
+import ExperienceSection from "@/components/ExperienceSection/Index";
+import ProjectsSection from "@/components/ProjectsSection/Index";
+import ContactSection from "@/components/ContactSection/Index";
 
 export default function HomePage() {
     return (
-        <main className="relative space-y-30 mb-20">
-            {/* Apresentação */}
-            <section
-                id="home"
-                className="min-h-screen flex items-center">
-                <HomeSection />
-            </section>
+        <main>
+            <HomeSection />
 
-            <hr className="border-dashed" />
+            <div className="relative max-w-7xl mx-auto">
+                <Header />
 
-            {/* Educação */}
-            <section id="education">
-                <EducationSection />
-            </section>
+                <section
+                    id="education"
+                    className="py-40">
+                    <EducationSection /> {/* Education */}
+                </section>
 
-            <hr className="border-dashed" />
+                <section
+                    id="experience"
+                    className="py-40">
+                    <ExperienceSection /> {/* Experience */}
+                </section>
 
-            {/* Experience */}
-            <section id="experience">
-                <ExperienceSection />
-            </section>
+                <section
+                    id="projects"
+                    className="py-40">
+                    <ProjectsSection /> {/* Projects */}
+                </section>
 
-            <hr className="border-dashed" />
-
-            {/* Skills */}
-            <section id="skills">
-                <SkillsSection />
-            </section>
-
-            <hr className="border-dashed" />
-
-            {/* Projetos */}
-            <section id="projects">
-                <ProjectsSection />
-            </section>
-
-            <hr className="border-dashed" />
-
-            {/* Contacto */}
-            <section id="contact">
-                <ContactSection />
-            </section>
+                <section
+                    id="contact"
+                    className="py-40">
+                    <ContactSection /> {/* Contact */}
+                </section>
+            </div>
         </main>
     );
 }

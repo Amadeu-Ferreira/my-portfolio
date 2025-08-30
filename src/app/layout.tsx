@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import "./globals.css";
 
 export const metadata: Metadata = {
-    title: "Amadeu Ferreira — Web Developer",
+    title: "Amadeu Ferreira",
     description: "Portfólio de Amadeu Ferreira, desenvolvedor web focado em aplicações modernas com React, Next.js e Node.js.",
 };
 
@@ -16,8 +15,7 @@ export default function RootLayout({
     return (
         <html lang="pt">
             <body className="flex min-h-screen flex-col">
-                <Header />
-                <main className="py-4 flex-1 w-full max-w-7xl mx-auto">{children}</main>
+                <main className="flex-1 w-full">{children}</main>
                 <Footer />
             </body>
         </html>

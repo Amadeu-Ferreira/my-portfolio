@@ -1,23 +1,31 @@
 "use client";
 
 import { Button } from "./ui/button";
+import LinkCustom from './LinkCustom';
 
 export default function Header() {
     return (
-        <header className="p-4 border-b w-full">
-            <div className="max-w-7xl mx-auto flex justify-between items-center">
-                {/* Logo / Nome */}
+        <header className="p-4 w-full border-x border-b rounded-b-xl shadow sticky top-0 bg-white/60 backdrop-blur">
+            <div className="flex justify-between items-center">
                 <h1 className="text-xl font-bold">Amadeu Ferreira</h1>
-
-                {/* Navigation */}
                 <nav className="flex gap-6 text-sm font-medium">
-                    <a href="#education" className="hover:text-blue-400 transition">Formação</a>
-                    <a href="#experience" className="hover:text-blue-400 transition">Experiência</a>
-                    <a href="#skills" className="hover:text-blue-400 transition">Competências</a>
-                    <a href="#projects" className="hover:text-blue-400 transition">Projetos</a>
-                    <a href="#contact" className="hover:text-blue-400 transition">Contactos</a>
+                    <LinkCustom
+                        to='education'
+                        value="Formação"
+                    />
+                    <LinkCustom
+                        to='experience'
+                        value="Experiência"
+                    />
+                    <LinkCustom
+                        to='projects'
+                        value="Projetos"
+                    />
+                    <LinkCustom
+                        to='contact'
+                        value="Contactos"
+                    />
                 </nav>
-
                 <a
                     href="/cv_amadeu_ferreira.pdf"
                     download>
@@ -27,9 +35,7 @@ export default function Header() {
                         Descarregar meu CV
                     </Button>
                 </a>
-
             </div>
         </header>
-
     );
 }
