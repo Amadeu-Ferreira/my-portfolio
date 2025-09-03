@@ -23,12 +23,12 @@ export default function Index() {
                 </p>
                 <div className="flex gap-4 justify-center md:justify-start pt-4">
                     <LinkCustom
-                        to="projects"
+                        to="social_networks"
                         value="Ver projetos"
                         variant="default"
                     />
                     <LinkCustom
-                        to="contact"
+                        to="call_to_action"
                         value="Contactar"
                         variant="outline"
                     />
