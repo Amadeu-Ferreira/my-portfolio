@@ -7,46 +7,49 @@ export default function Card({ currentProject }: { currentProject: number }) {
     if (!project) return;
 
     return (
-        <div className="p-1 rounded-xl border border-gray-200 shadow-sm hover:shadow-md">
+        <div className="p-1 rounded-xl border flex flex-col justify-between">
             {/* Imagem do projeto */}
             <Image
                 src={project.img}
                 alt="Foto da web app de nutrição"
-                className="rounded-lg border"
+                className="rounded-lg"
                 width={1000}
                 height={1000}
             />
 
-            <div className="p-6 space-y-6">
-                {/* Conteúdo */}
-                <div>
+            <div className="p-6 flex flex-col h-full">
+                {/* Bloco do conteúdo normal */}
+                <div className="space-y-4">
                     <h2 className="text-lg font-semibold text-gray-900">
                         {project.name}
                         <span className="text-sm text-gray-500 font-normal ml-2">({project.year})</span>
                     </h2>
                     <p className="text-sm text-gray-600 mt-1">{project.description}</p>
+
+                    {/* Tecnologias */}
+                    <div className="flex flex-wrap gap-2 mt-2">
+                        {project.technologies.map((field, index) => (
+                            <span
+                                key={index}
+                                className="px-2 py-1 text-xs rounded-full bg-gray-100 text-gray-700 border border-gray-600"
+                            >
+                                {field}
+                            </span>
+                        ))}
+                    </div>
                 </div>
 
-                {/* Tecnologias */}
-                <div className="flex flex-wrap gap-2 mt-2">
-                    {project.technologies.map((field, index) => (
-                        <span
-                            key={index}
-                            className="px-2 py-1 text-xs rounded-full bg-gray-100 text-gray-700 border border-gray-600">
-                            {field}
-                        </span>
-                    ))}
+                {/* Link colado em baixo */}
+                <div className="mt-auto pt-6">
+                    <a
+                        href={project.demo_link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm font-medium text-blue-600 hover:underline"
+                    >
+                        Ver Demo
+                    </a>
                 </div>
-
-                {/* Links */}
-                <a
-                    href={project.demo_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-medium text-blue-600 hover:underline"
-                >
-                    Ver Demo
-                </a>
             </div>
         </div>
     );

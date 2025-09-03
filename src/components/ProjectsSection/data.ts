@@ -1,10 +1,10 @@
 export const projectsSection = {
-    title: "Projetos",
+    title: "Meus Projetos",
     projects: [
         {
             id: 1,
             img: "/projeto_de_nutricao.png",
-            name: "Web App de Nutrição",
+            name: "App de Nutrição",
             year: "2025",
             description: "Aplicação web para criação e gestão de planos alimentares personalizados.",
             technologies: [
@@ -12,6 +12,21 @@ export const projectsSection = {
                 "TypeScript",
                 "Tailwind CSS",
                 "Shadcn"
+            ],
+            demo_link: "#"
+        },
+        {
+            id: 2,
+            img: "/projeto_de_restaurante.png",
+            name: "App de Gestão de Restaurantes",
+            year: "2025",
+            description: "Aplicação web para gestão de menus e registo de pedido.",
+            technologies: [
+                "Next.js",
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "Tailwind CSS"
             ],
             demo_link: "#"
         }
