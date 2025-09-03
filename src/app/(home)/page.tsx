@@ -1,4 +1,3 @@
-import Header from "@/components/Header";
 import HomeSection from "@/components/HomeSection/Index";
 import EducationSection from "@/components/EducationSection/Index";
 import ExperienceSection from "@/components/ExperienceSection/Index";
@@ -7,36 +6,38 @@ import ContactSection from "@/components/ContactSection/Index";
 
 export default function HomePage() {
     return (
-        <main>
-            <HomeSection />
+        <main className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-            <div className="relative max-w-7xl mx-auto">
-                <Header />
+            <section
+                id="home"
+                className="min-h-screen flex items-center">
+                <HomeSection />
+            </section>
 
-                <section
-                    id="education"
-                    className="py-40">
-                    <EducationSection /> {/* Education */}
-                </section>
+            <section
+                id="projects"
+                className="py-20">
+                <ProjectsSection />
+            </section>
 
-                <section
-                    id="experience"
-                    className="py-40">
-                    <ExperienceSection /> {/* Experience */}
-                </section>
+            <section
+                id="education"
+                className="py-20">
+                <EducationSection />
+            </section>
 
-                <section
-                    id="projects"
-                    className="py-40">
-                    <ProjectsSection /> {/* Projects */}
-                </section>
+            <section
+                id="experience"
+                className="py-20">
+                <ExperienceSection />
+            </section>
 
-                <section
-                    id="contact"
-                    className="py-40">
-                    <ContactSection /> {/* Contact */}
-                </section>
-            </div>
+            <section
+                id="contact"
+                className="py-20">
+                <ContactSection />
+            </section>
+
         </main>
     );
 }

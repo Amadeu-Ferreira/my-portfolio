@@ -1,7 +1,5 @@
-
-import { Badge } from "../ui/badge";
 import { projectsSection } from "@/components/ProjectsSection/data";
-import { Button } from "../ui/button";
+import Image from "next/image";
 
 export default function Card({ currentProject }: { currentProject: number }) {
     const project = projectsSection.projects.find((project) => project.id === currentProject);
@@ -9,29 +7,47 @@ export default function Card({ currentProject }: { currentProject: number }) {
     if (!project) return;
 
     return (
-        <div className="border border-dashed rounded-xl p-4 flex flex-col space-y-4">
+        <div className="p-1 rounded-xl border border-gray-200 shadow-sm hover:shadow-md">
+            {/* Imagem do projeto */}
+            <Image
+                src={project.img}
+                alt="Foto da web app de nutrição"
+                className="rounded-lg border"
+                width={1000}
+                height={1000}
+            />
 
-            <div className="flex justify-between items-center">
+            <div className="p-6 space-y-6">
+                {/* Conteúdo */}
                 <div>
-                    <h1 className="text-xl font-semibold">{project.name}</h1>
-                    <p className="text-xs">{project.status}</p>
+                    <h2 className="text-lg font-semibold text-gray-900">
+                        {project.name}
+                        <span className="text-sm text-gray-500 font-normal ml-2">({project.year})</span>
+                    </h2>
+                    <p className="text-sm text-gray-600 mt-1">{project.description}</p>
                 </div>
-                {project.url ? (
-                    <Button variant="outline">
-                        Demo
-                    </Button>
-                ) : (
-                    <p className="text-xs">Demo disponivel brevemente</p>
-                )}
+
+                {/* Tecnologias */}
+                <div className="flex flex-wrap gap-2 mt-2">
+                    {project.technologies.map((field, index) => (
+                        <span
+                            key={index}
+                            className="px-2 py-1 text-xs rounded-full bg-gray-100 text-gray-700 border border-gray-600">
+                            {field}
+                        </span>
+                    ))}
+                </div>
+
+                {/* Links */}
+                <a
+                    href={project.demo_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium text-blue-600 hover:underline"
+                >
+                    Ver Demo
+                </a>
             </div>
-
-            <div className="flex flex-wrap gap-1">
-                {project.technologies.map((field, index) => (
-                    <Badge key={index} variant="outline">{field}</Badge>
-                ))}
-            </div>
-
-
         </div>
     );
 }

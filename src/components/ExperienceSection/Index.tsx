@@ -9,8 +9,8 @@ export default function Index() {
     const companies = experienceSection.companies;
 
     return (
-        <div className="flex gap-4 space-y-4">
-            <Title title={title} />
+        <div className="space-y-4">
+            <Title title={title} color={"text-green-600"} />
             <div className="w-full space-y-4">
                 {companies.map((field) => (
                     <Card

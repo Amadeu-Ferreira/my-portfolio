@@ -11,14 +11,14 @@ export const educationSection = {
         {
             level: 5,
             degree: "Técnico Superior Profissional",
-            institution: "Escola Superior de Tecnologia e Gestão",
+            institution: "ESTG",
             course: "Desenvolvimento para a Web e Dispositivos Móveis",
             period: "2018/2021"
         },
         {
             level: 6,
             degree: "Licenciatura",
-            institution: "Escola Superior de Tecnologia e Gestão",
+            institution: "ESTG",
             course: "Engenharia Informática",
             period: "2021/2024 - Em pausa"
         }

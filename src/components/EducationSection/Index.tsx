@@ -9,8 +9,8 @@ export default function Index() {
     const degrees = educationSection.degrees;
 
     return (
-        <div className="flex gap-4">
-            <Title title={title} />
+        <div className="space-y-4">
+            <Title title={title} color={"text-red-600"} />
             <div className="space-y-4 w-full">
                 {degrees.map((degree, index) => (
                     <Card
