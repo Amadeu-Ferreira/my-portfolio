@@ -1,7 +1,7 @@
-import Title from "../Title";
 import { projectsSection } from "@/components/ProjectsSection/data";
-import Card from "./Card";
 import { Construction } from "lucide-react";
+import Title from "../Title";
+import Card from "./Card";
 
 export default function Index() {
     const title = projectsSection.title;
@@ -21,13 +21,11 @@ export default function Index() {
                         currentProject={field.id}
                     />
                 ))}
-                {/* Placeholder */}
                 <div className="p-6 rounded-xl border border-dashed border-gray-300 bg-gray-50 flex flex-col items-center justify-center text-gray-400 text-sm">
                     <Construction className="w-6 h-6 mb-2" />
                     <span>Mais projetos em breve</span>
                 </div>
             </div>
-
         </>
     );
 }

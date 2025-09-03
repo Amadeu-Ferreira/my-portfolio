@@ -4,17 +4,17 @@ export default function Networks() {
     const social = [
         {
             name: "Instagram",
-            href: "https://instagram.com",
+            href: "#",
             Icon: Instagram,
         },
         {
             name: "Github",
-            href: "https://github.com",
+            href: "#",
             Icon: Github,
         },
         {
             name: "LinkedIn",
-            href: "https://www.linkedin.com",
+            href: "#",
             Icon: Linkedin,
         },
     ];

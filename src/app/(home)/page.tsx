@@ -6,8 +6,7 @@ import CallToActionSection from "@/components/CallToActionSection/Index";
 
 export default function HomePage() {
     return (
-        <main className="relative">
-
+        <main>
             <section
                 id="home"
                 className="min-h-screen flex items-center">
@@ -31,7 +30,6 @@ export default function HomePage() {
                 <Experience />
             </section>
 
-            {/* CallToAction */}
             <section
                 id="call_to_action"
                 className="py-10">

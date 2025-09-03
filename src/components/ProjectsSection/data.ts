@@ -13,7 +13,7 @@ export const projectsSection = {
                 "Tailwind CSS",
                 "Shadcn"
             ],
-            demo_link: "#"
+            demo_link: null
         },
         {
             id: 2,
@@ -28,7 +28,7 @@ export const projectsSection = {
                 "MongoDB",
                 "Tailwind CSS"
             ],
-            demo_link: "#"
+            demo_link: null
         }
     ]
 } as const;
