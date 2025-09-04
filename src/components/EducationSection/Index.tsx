@@ -1,19 +1,19 @@
-import { experienceSection } from "./data";
+import { educationSection } from "./data";
 import Title from "../Title";
 import Card from "./Card";
 
 export default function Index() {
     return (
         <>
-            <Title title={experienceSection.title} color="text-blue-600" />
+            <Title title={educationSection.title} color="text-blue-600" />
             <p className="mt-2 text-sm md:text-base text-gray-600 max-w-2xl">
-                {experienceSection.text}
+                {educationSection.text}
             </p>
             <div className="pt-6">
-                {experienceSection.experience.map((field) => (
+                {educationSection.education.map((field) => (
                     <Card
                         key={field.id}
-                        currentExperience={field.id}
+                        currentEducation={field.id}
                     />
                 ))}
             </div>

@@ -1,7 +1,7 @@
 import Hero from "@/components/HeroSection/Index";
 import SocialNetworks from "@/components/SocialNetworksSection/Index";
 import Projects from "@/components/ProjectsSection/Index";
-import Experience from "@/components/ExperienceSection/Index";
+import Education from "@/components/EducationSection/Index";
 import Contact from "@/components/ContactSection/Index";
 
 export default function HomePage() {
@@ -20,7 +20,7 @@ export default function HomePage() {
             </section>
 
             <section id="experience" className="py-10">
-                <Experience />
+                <Education />
             </section>
 
             <section id="call_to_action" className="py-10">

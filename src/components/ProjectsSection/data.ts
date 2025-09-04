@@ -20,10 +20,12 @@ export const projectsSection = {
             img: "/projeto_de_restaurante.png",
             name: "App de Gestão de Restaurantes",
             year: "2025",
-            description: "Aplicação web para gestão de menus e registo de pedido.",
+            description: "Aplicação web para gestão de menus e controlo de pedidos.",
             technologies: [
                 "Next.js",
                 "Node.js",
+                "Node.js",
+                "Socket.IO",
                 "Express",
                 "MongoDB",
                 "Tailwind CSS"
