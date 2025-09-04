@@ -24,7 +24,6 @@ export const projectsSection = {
             technologies: [
                 "Next.js",
                 "Node.js",
-                "Node.js",
                 "Socket.IO",
                 "Express",
                 "MongoDB",
