@@ -6,7 +6,7 @@ export default function Card({ currentExperience }: { currentExperience: number 
     if (!experience) return;
 
     return (
-        <div className="border-b last:border-0 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4">
+        <div className="border-b border-gray-300 last:border-0 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4">
             <div>
                 <h1 className="text-base md:text-lg font-semibold text-gray-900">
                     {experience.type === "education" ? experience.course : experience.company}

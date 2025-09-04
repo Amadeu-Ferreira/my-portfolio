@@ -4,17 +4,17 @@ export default function Networks() {
     const social = [
         {
             name: "Instagram",
-            href: "#",
+            href: "https://www.instagram.com/amadeu_ferreira_dev/",
             Icon: Instagram,
         },
         {
             name: "Github",
-            href: "#",
+            href: "https://github.com/Amadeu-Ferreira/",
             Icon: Github,
         },
         {
             name: "LinkedIn",
-            href: "#",
+            href: "https://linkedin.com/in/amadeu-ferreira-512759382",
             Icon: Linkedin,
         },
     ];

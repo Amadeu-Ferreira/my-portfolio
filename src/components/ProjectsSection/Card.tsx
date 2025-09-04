@@ -8,7 +8,7 @@ export default function Card({ currentProject }: { currentProject: number }) {
     if (!project) return;
 
     return (
-        <div className="p-1 rounded-xl border flex flex-col justify-between">
+        <div className="p-1 rounded-xl border border-gray-300 flex flex-col justify-between">
             <Image
                 src={project.img}
                 alt="Foto da web app de nutrição"
