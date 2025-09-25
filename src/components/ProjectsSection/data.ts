@@ -6,14 +6,14 @@ export const projectsSection = {
             img: "/projeto_de_nutricao.png",
             name: "App de Nutrição",
             year: "2025",
-            description: "Aplicação web para criação e gestão de planos alimentares personalizados.",
+            description: "Ferramenta concebida para uso profissional de nutricionistas.",
             technologies: [
                 "Next.js",
                 "TypeScript",
                 "Tailwind CSS",
                 "Shadcn"
             ],
-            demo_link: null
+            demo_link: "https://nutricao.amadeuferreira.pt/"
         },
         {
             id: 2,
